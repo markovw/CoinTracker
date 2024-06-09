@@ -7,16 +7,11 @@
 
 import SwiftUI
 
-struct Ticker: Hashable, Codable {
-    var id: Int
-    var icon: String
-    var coinName: String
-    var capitalization: Int
-    var price: Int
-    
-    private var imageName: String
-    var image: Image {
-        Image(imageName)
-    }
+struct Ticker: Codable {
+    var id: String
+    var symbol: String
+    var name: String
+    var image: String
+    var currentPrice: Double
+    var marketCapRank: Int
 }
-
