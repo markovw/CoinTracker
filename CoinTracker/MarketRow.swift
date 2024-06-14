@@ -1,78 +1,91 @@
 //
-//  MarketRow.swift
+//  Testttt.swift
 //  CoinTracker
 //
-//  Created by Vladislav on 05.06.2024.
+//  Created by Vladislav on 14.06.2024.
 //
 
 import SwiftUI
 
 struct MarketRow: View {
-    @State private var ticker: Ticker?
+    @State private var tickers: [Ticker] = []
     @State private var isLoading = true
     
+    let columns: [GridItem] = [
+        .init(.flexible(maximum: 30), spacing: 10, alignment: .center),
+        .init(.flexible(maximum: 120), spacing: 60),
+        .init(.flexible(maximum: 80), spacing: 30, alignment: .trailing),
+        .init(.flexible(maximum: 70), alignment: .trailing)]
+    
+    
     var body: some View {
-        List {
+        VStack {
             if isLoading {
                 Text("Loading...")
-            } else if let ticker = ticker {
-                HStack {
+            } else if tickers.isEmpty {
+                Text("No data available")
+            } else {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    
                     Text("#")
                     Text("Market cap")
-                        .padding(.trailing, 125)
                     Text("Price")
-                        .padding(.trailing, 50)
                     Text("24h %")
+                    
+                    ForEach(tickers) { ticker in
+                        
+                        Text("\(ticker.marketCapRank)")
+                            .font(.subheadline)
+                        
+                        HStack {
+                            AsyncImage(url: URL(string: ticker.image)) { phase in
+                                if let image = phase.image {
+                                    image
+                                        .resizable()
+                                        .frame(width: 25, height: 25)
+                                }
+                            }
+                            VStack(alignment: .leading) {
+                                Text(ticker.symbol.uppercased())
+                                Text("1,39 T")
+//                                Text("\(String(format: "%.2f", ticker.marketCap / 1000000000)) $ B")
+                            }
+                        }
+                        
+                        Text("\(formatPrice(ticker.currentPrice)) $")
+                            .fontWeight(.medium)
+                            .font(.subheadline)
+                        
+                        Text("graph")
+                    }
                 }
                 .font(.caption)
                 
-                HStack {
-                    Text("\(ticker.marketCapRank)")
-                    
-                    AsyncImage(url: URL(string: ticker.image)) { phase in
-                        if let image = phase.image {
-                            image
-                                .resizable()
-                                .frame(width: 25, height: 25)
-                        }
-                    }
-                    
-                    VStack(alignment: .leading) {
-                        Text(ticker.symbol.uppercased())
-                            .fontWeight(.medium)
-                            .font(.caption)
-                            .padding(.bottom, 3)
-                            
-                        Text("$1,39 T")
-                            .font(.caption)
-                    }
-                    .padding(.leading, -5)
-                    .padding(.trailing, 80)
-
-                    Text("\(ticker.currentPrice.formatted(.number)) $")
-                        .fontWeight(.medium)
-                        .font(.subheadline)
-                }
-                .padding(.bottom, 5)
-            } else {
-                Text("Failed to load data")
+                //                Spacer()
             }
-            
         }
-        .listStyle(.plain)
         .onAppear {
             Task {
-                await fetchTicker()
+                await fetchTickers()
             }
         }
     }
-    private func fetchTicker() async {
+    
+    private func formatPrice(_ price: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 4
+        return formatter.string(from: NSNumber(value: price)) ?? "\(price)"
+    }
+    
+    private func fetchTickers() async {
         let networkManager = NetworkManager()
         do {
-            let fetchedTicker = try await networkManager.loadData()
-            ticker = fetchedTicker
+            let fetchedTickers = try await networkManager.loadData()
+            tickers = fetchedTickers
         } catch {
-            print("Failed to fetch ticker: \(error)")
+            print("Failed to fetch tickers: \(error)")
         }
         isLoading = false
     }

@@ -9,12 +9,15 @@ import SwiftUI
 import Foundation
 
 final class NetworkManager {
-    func loadData() async throws -> Ticker {
+    func loadData() async throws -> [Ticker] {
+        let coinsArray = ["bitcoin", "ethereum", "the-open-network", "ripple", "aptos", "arbitrum", "notcoin"]
+        let coinsString = coinsArray.joined(separator: ",")
+        
         let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets")!
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         let queryItems: [URLQueryItem] = [
             URLQueryItem(name: "vs_currency", value: "usd"),
-            URLQueryItem(name: "ids", value: "bitcoin"),
+            URLQueryItem(name: "ids", value: coinsString),
             URLQueryItem(name: "price_change_percentage", value: "1h"),
         ]
         components.queryItems = queryItems
@@ -27,6 +30,8 @@ final class NetworkManager {
             "x-cg-demo-api-key": "\(APIKeys().key)"
         ]
         
+        print("Request URL: \(request.url!)")
+        
         let (data, _) = try await URLSession.shared.data(for: request)
         print(String(decoding: data, as: UTF8.self))
         
@@ -36,11 +41,11 @@ final class NetworkManager {
             
             let tickers = try decoder.decode([Ticker].self, from: data)
             
-            guard let ticker = tickers.first else {
+            if tickers.isEmpty {
                 throw CRError.invalidData
             }
             
-            return ticker
+            return tickers
         } catch {
             throw CRError.invalidData
         }

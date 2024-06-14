@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MarketDetail: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("There will be detail view of selected coin")
     }
 }
 

@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct Ticker: Codable {
+struct Ticker: Codable, Identifiable {
     var id: String
     var symbol: String
     var name: String
     var image: String
     var currentPrice: Double
+    var marketCap: Double
     var marketCapRank: Int
 }
