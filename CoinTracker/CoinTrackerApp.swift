@@ -11,7 +11,7 @@ import SwiftUI
 struct CoinTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            MarketRow()
+            MarketTab()
         }
     }
 }

@@ -15,4 +15,5 @@ struct Ticker: Codable, Identifiable {
     var currentPrice: Double
     var marketCap: Double
     var marketCapRank: Int
+    var priceChangePercentage24H: Double
 }
