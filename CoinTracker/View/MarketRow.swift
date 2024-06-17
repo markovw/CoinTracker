@@ -19,14 +19,12 @@ struct MarketRow: View {
     
     var body: some View {
         NavigationStack {
-            
             ZStack {
                 if isLoading {
                     ProgressView() {
                         Text("Loading...")
                     }
                     .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-                    
                 } else if tickers.isEmpty {
                     Text("No data available. Notify the support")
                 } else {
@@ -42,7 +40,7 @@ struct MarketRow: View {
                                     .font(.subheadline)
                                 
                                 NavigationLink(destination: MarketDetail(ticker: ticker)) {
-                                    HStack(spacing: 8) {
+                                    HStack(spacing: 8) { // ticker + marketcap
                                         AsyncImage(url: URL(string: ticker.image)) { phase in
                                             if let image = phase.image {
                                                 image
@@ -58,11 +56,17 @@ struct MarketRow: View {
                                 }
                                 .buttonStyle(PlainButtonStyle())
                                 
-                                Text("\(formatPrice(ticker.currentPrice)) $")
+                                Text("\(ticker.currentPrice.toCurrency()) $") // ticker price
                                     .fontWeight(.medium)
                                     .font(.subheadline)
-                                
-                                Text("\(String(format: "%.2f", ticker.priceChangePercentage24H)) %")
+
+                                HStack { // 24h percentage
+                                    Image(systemName: ticker.priceChangePercentage24H < 0 ?"triangle.fill" : "triangle.fill")
+                                        .imageScale(.small)
+                                        .foregroundStyle(ticker.priceChangePercentage24H < 0 ? .red : .green)
+                                        .rotationEffect(ticker.priceChangePercentage24H < 0 ? .degrees(180): .degrees(0))
+                                    Text("\(ticker.priceChangePercentage24H.toPercentString()) %")
+                                }
                             }
                         }
                         .font(.caption)
@@ -84,14 +88,6 @@ struct MarketRow: View {
                 await fetchTickers()
             }
         }
-    }
-    
-    private func formatPrice(_ price: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 4
-        return formatter.string(from: NSNumber(value: price)) ?? "\(price)"
     }
     
     private func fetchTickers() async {
