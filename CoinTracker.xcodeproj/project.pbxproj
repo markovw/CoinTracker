@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860C2FBC2C205C80004799C9 /* TickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C2FBB2C205C80004799C9 /* TickerRow.swift */; };
 		8628BF652C1635F8006CF6B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628BF642C1635F8006CF6B3 /* NetworkManager.swift */; };
 		8628BF672C163698006CF6B3 /* CRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628BF662C163698006CF6B3 /* CRError.swift */; };
 		8628BF692C163DCE006CF6B3 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628BF682C163DCE006CF6B3 /* Keys.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		860C2FBB2C205C80004799C9 /* TickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRow.swift; sourceTree = "<group>"; };
 		8628BF642C1635F8006CF6B3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8628BF662C163698006CF6B3 /* CRError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRError.swift; sourceTree = "<group>"; };
 		8628BF682C163DCE006CF6B3 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				868996C52C1F2A9500BA8581 /* MarketChart.swift */,
 				869CCE092C1E33EC004D8A2E /* MarketSearch.swift */,
 				869CCE0B2C1E3492004D8A2E /* MarketPortfolio.swift */,
+				860C2FBB2C205C80004799C9 /* TickerRow.swift */,
 				864286D42C10FB3E0093A8FC /* Ticker.swift */,
 			);
 			path = View;
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				869CCE0C2C1E3492004D8A2E /* MarketPortfolio.swift in Sources */,
+				860C2FBC2C205C80004799C9 /* TickerRow.swift in Sources */,
 				8628BF652C1635F8006CF6B3 /* NetworkManager.swift in Sources */,
 				8628BF692C163DCE006CF6B3 /* Keys.swift in Sources */,
 				869CCE0A2C1E33EC004D8A2E /* MarketSearch.swift in Sources */,

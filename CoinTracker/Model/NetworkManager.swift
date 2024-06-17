@@ -38,13 +38,11 @@ final class NetworkManager {
         do { // convert to camel case
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
             let tickers = try decoder.decode([Ticker].self, from: data)
             
             if tickers.isEmpty {
                 throw CRError.invalidData
             }
-            
             return tickers
         } catch {
             throw CRError.invalidData

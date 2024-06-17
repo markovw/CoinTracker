@@ -39,13 +39,13 @@ struct MarketDetail: View {
                         VStack {
                             Text("Current Price")
                                 
-                            Text("\(ticker.currentPrice.toCurrency()) $")
+                            Text(ticker.currentPrice.toCurrency() + " $")
                                 .font(.title2.bold())
                             RoundedRectangle(cornerRadius: 8)
                                 .frame(width: 90, height: 35)
                                 .foregroundStyle(ticker.priceChangePercentage24H < 0 ? .red : .green)
                                 .overlay {
-                                    Text("\(ticker.priceChangePercentage24H.toPercentString()) %")
+                                    Text(ticker.priceChangePercentage24H.toPercentString())
                                         .foregroundStyle(.white)
                                 }
                         }
@@ -60,7 +60,7 @@ struct MarketDetail: View {
                                 .frame(width: 90, height: 35)
                                 .foregroundStyle (ticker.marketCapChangePercentage24H < 0 ? .red : .green)
                                 .overlay {
-                                    Text("\(ticker.marketCapChangePercentage24H.toPercentString()) %")
+                                    Text(ticker.marketCapChangePercentage24H.toPercentString())
                                         .foregroundStyle(.white)
                                 }
                         }

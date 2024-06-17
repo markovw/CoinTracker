@@ -12,8 +12,6 @@ extension Double {
         let formatter = NumberFormatter()
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = 2
         return formatter
     }
     
@@ -26,10 +24,20 @@ extension Double {
     }
     
     func toCurrency() -> String {
+        let formatter = currencyFormatter
+        if self < 1 {
+            formatter.minimumFractionDigits = 4
+            formatter.maximumFractionDigits = 4
+        } else {
+            formatter.minimumFractionDigits = 2
+            formatter.maximumFractionDigits = 2
+        }
+        
         return currencyFormatter.string(for: self) ?? "0.00 $"
     }
     
     func toPercentString() -> String {
-        return numberFormatter.string(for: self) ?? "0.00%"
+        guard let numberAsString = numberFormatter.string(for: self) else { return ""}
+        return numberAsString + "%"
     }
 }
