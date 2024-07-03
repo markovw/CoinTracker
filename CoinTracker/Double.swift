@@ -40,37 +40,4 @@ extension Double {
         guard let numberAsString = numberFormatter.string(for: self) else { return ""}
         return numberAsString + "%"
     }
-    
-    func toMarketCap() -> String {
-        return String(format: "%.2f", self)
-    }
-    
-    func toCapitalization() -> String {
-        let num = abs(Double(self))
-        let sign = (self < 0) ? "-" : ""
-        
-        switch num {
-        case 1_000_000_000_000...:
-            let formatted = num / 1_000_000_000_000
-            let stringFormatted = formatted.toMarketCap()
-            return "\(sign)\(stringFormatted) $ T"
-        case 1_000_000_000...:
-            let formatted = num / 1_000_000_000
-            let stringFormatted = formatted.toMarketCap()
-            return "\(sign)\(stringFormatted) $ B"
-        case 1_000_000...:
-            let formatted = num / 1_000_000
-            let stringFormatted = formatted.toMarketCap()
-            return "\(sign)\(stringFormatted) $ M"
-        case 1_000...:
-            let formatted = num / 1_000
-            let stringFormatted = formatted.toMarketCap()
-            return "\(sign)\(stringFormatted) $ K."
-        case 0...:
-            return self.toMarketCap()
-            
-        default:
-            return "\(sign)\(self)"
-        }
-    }
 }

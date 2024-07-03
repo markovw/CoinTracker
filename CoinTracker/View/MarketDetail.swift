@@ -13,7 +13,7 @@ struct MarketDetail: View {
     var body: some View {
         VStack(alignment: .leading, spacing: -10) {
             HStack {
-                Text("\(ticker.name.capitalized)").font(.title).fontWeight(.bold)
+                Text("\(ticker.id.capitalized)").font(.title).fontWeight(.bold)
                 RoundedRectangle(cornerRadius: 5)
                     .frame(width: 40, height: 25)
                     .foregroundStyle(.black.opacity(0.75))
@@ -38,7 +38,7 @@ struct MarketDetail: View {
                     .overlay {
                         VStack {
                             Text("Current Price")
-                            
+                                
                             Text(ticker.currentPrice.toCurrency() + " $")
                                 .font(.title2.bold())
                             RoundedRectangle(cornerRadius: 8)
@@ -49,7 +49,7 @@ struct MarketDetail: View {
                                         .foregroundStyle(.white)
                                 }
                         }
-                        .foregroundStyle(Color("backgroundColor"))
+                        .foregroundStyle(.background)
                     }
                 RoundedRectangle(cornerRadius: 10)
                     .overlay {
@@ -64,7 +64,7 @@ struct MarketDetail: View {
                                         .foregroundStyle(.white)
                                 }
                         }
-                        .foregroundStyle(Color("backgroundColor"))
+                        .foregroundStyle(.background)
                     }
             }
             .frame(width: UIScreen.main.bounds.width - 20, height: 150)
@@ -72,17 +72,16 @@ struct MarketDetail: View {
             .padding()
         }
         
-//        Rectangle() // graph view
-//            .frame(width: UIScreen.main.bounds.width - 20, height: 300)
-//            .opacity(0.1)
-//            .overlay {
-//                Text("Graph View")
-//            }
-        MarketChart(ticker: ticker)
+        Rectangle() // graph view
+            .frame(width: UIScreen.main.bounds.width - 20, height: 300)
+            .opacity(0.1)
+            .overlay {
+                Text("Graph View")
+            }
         
         Spacer()
         
-            .toolbar(.hidden, for: .tabBar)
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MarketRow: View {
-    @StateObject var viewModel = MarketRowModel()
+    @State private var tickers: [Ticker] = []
+    @State private var isLoading = true
     
     let columns: [GridItem] = [
         .init(.flexible(minimum: 20, maximum: 30), alignment: .center),
@@ -20,22 +21,23 @@ struct MarketRow: View {
         NavigationStack {
             ScrollView {
                 ZStack {
-                    if viewModel.isLoading {
+                    if isLoading {
                         ProgressView() {
                             Text("Loading...")
                         }
                         .offset(y: 250)
                         .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-                    } else if viewModel.tickers.isEmpty {
+                    } else if tickers.isEmpty {
                         Text("No data available. Try to refresh the page. If it doesn't work, notify the support.")
                     } else {
+                        
                         LazyVGrid(columns: columns, spacing: 20) {
                             Text("#")
                             Text("Market cap")
                             Text("Price")
                             Text("24h %")
                             
-                            ForEach(viewModel.tickers) { ticker in
+                            ForEach(tickers) { ticker in
                                 TickerRow(ticker: ticker)
                             }
                         }
@@ -51,27 +53,26 @@ struct MarketRow: View {
                 }
             }
             .refreshable {
-                await viewModel.fetchTickers()
+                await fetchTickers()
             }
         }
         .onAppear {
             Task {
-                await viewModel.fetchTickers()
+                await fetchTickers()
             }
         }
     }
     
-//    private func fetchTickers() async {
-//        let networkManager = NetworkManager()
-//        do {
-//            let fetchedTickers = try await networkManager.loadData()
-//            tickers = fetchedTickers
-//            isLoading = false
-//        } catch {
-//            print("Failed to fetch tickers: \(error)")
-//        }
-//        
-//    }
+    private func fetchTickers() async {
+        let networkManager = NetworkManager()
+        do {
+            let fetchedTickers = try await networkManager.loadData()
+            tickers = fetchedTickers
+        } catch {
+            print("Failed to fetch tickers: \(error)")
+        }
+        isLoading = false
+    }
 }
 
 #Preview {
