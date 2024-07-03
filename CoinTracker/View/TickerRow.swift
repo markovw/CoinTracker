@@ -26,7 +26,7 @@ struct TickerRow: View {
                 }
                 VStack(alignment: .leading, spacing: 5) {
                     Text(ticker.symbol.uppercased()).fontWeight(.medium)
-                    Text("\(String(format: "%.2f", ticker.marketCap / 1000000000)) $ B").lineLimit(1)
+                    Text(ticker.marketCap.toCapitalization())
                 }
             }
         }
