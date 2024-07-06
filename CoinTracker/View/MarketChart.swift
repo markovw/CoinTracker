@@ -20,19 +20,10 @@ struct MarketChart: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
-<<<<<<< Updated upstream
-            
             
             LineChartView(prices: viewModel.prices)
                     .frame(height: 300)
-            
-            
-=======
-     
-            LineChartView(prices: viewModel.prices)
-                    .frame(height: 300)
-            
->>>>>>> Stashed changes
+    
             Spacer()
         }
         .onChange(of: viewModel.selectedPeriod) { oldValue, newValue in
@@ -53,11 +44,7 @@ struct LineChartView: View {
                     y: .value("Price", prices[index])
                 )
                 .lineStyle(StrokeStyle(lineWidth: 2))
-<<<<<<< Updated upstream
-=======
                 .foregroundStyle(Color(.green))
-                
->>>>>>> Stashed changes
             }
         }
         .chartYAxis {

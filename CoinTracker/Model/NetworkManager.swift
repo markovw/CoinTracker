@@ -63,11 +63,7 @@ final class ChartAPI {
         request.timeoutInterval = 10
         request.allHTTPHeaderFields = [
             "accept": "application/json",
-<<<<<<< Updated upstream
-            "x-cg-demo-api-key": "CG-rAy6R4nQzYdy8TADwH6mjqUF"
-=======
             "x-cg-demo-api-key": APIKeys().key
->>>>>>> Stashed changes
         ]
         
         return URLSession.shared.dataTaskPublisher(for: request)
