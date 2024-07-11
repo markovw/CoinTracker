@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CoinTrackerApp: App {
+    @StateObject private var favorites = Favorites()
+    
     var body: some Scene {
         WindowGroup {
             MarketTab()
+                .environmentObject(favorites)
         }
     }
 }

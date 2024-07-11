@@ -26,7 +26,6 @@ final class NetworkManager {
           "accept": "application/json",
           "x-cg-demo-api-key": APIKeys().key
         ]
-        
         print("Request URL: \(request.url!)")
         
         let (data, _) = try await URLSession.shared.data(for: request)
@@ -50,30 +49,51 @@ final class NetworkManager {
 final class ChartAPI {
     static let baseURL = "https://api.coingecko.com/api/v3/coins"
     
-    func fetchPrices(for coin: String, from: TimeInterval, to: TimeInterval) -> AnyPublisher<[Double], Error> {
+    func fetchPrices(for coin: String, from: TimeInterval, to: TimeInterval) -> AnyPublisher<[[Double]], Error> {
         var components = URLComponents(string: "\(ChartAPI.baseURL)/\(coin)/market_chart/range")!
         components.queryItems = [
             URLQueryItem(name: "vs_currency", value: "usd"),
-            URLQueryItem(name: "from", value: String(from)),
-            URLQueryItem(name: "to", value: String(to)),
+            URLQueryItem(name: "from", value: String(Int(from))),
+            URLQueryItem(name: "to", value: String(Int(to))),
         ]
         
         var request = URLRequest(url: components.url!)
         request.httpMethod = "GET"
-        request.timeoutInterval = 10
+        request.timeoutInterval = 30
         request.allHTTPHeaderFields = [
             "accept": "application/json",
             "x-cg-demo-api-key": APIKeys().key
         ]
         
         return URLSession.shared.dataTaskPublisher(for: request)
-            .map { $0.data }
+            .tryMap { data, response -> Data in
+                guard let httpResponse = response as? HTTPURLResponse,
+                      (200...299).contains(httpResponse.statusCode) else {
+                    throw URLError(.badServerResponse)
+                }
+                return data
+            }
             .decode(type: MarketChartResponse.self, decoder: JSONDecoder())
-            .map { $0.prices.map { $0[1] } }
+            .map { $0.prices! }
             .eraseToAnyPublisher()
     }
     
     struct MarketChartResponse: Codable {
-        let prices: [[Double]]
+        let prices: [[Double]]?
+        let error: APIError?
+    }
+
+    struct APIError: Codable {
+        let status: ErrorStatus
+    }
+
+    struct ErrorStatus: Codable {
+        let errorCode: Int
+        let errorMessage: String
+        
+        enum CodingKeys: String, CodingKey {
+            case errorCode = "error_code"
+            case errorMessage = "error_message"
+        }
     }
 }

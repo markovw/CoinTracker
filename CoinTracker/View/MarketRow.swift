@@ -34,14 +34,13 @@ struct MarketRow: View {
                             Text("Market cap")
                             Text("Price")
                             Text("24h %")
-                            
+
                             ForEach(viewModel.tickers) { ticker in
                                 TickerRow(ticker: ticker)
                             }
                         }
                         .font(.caption)
                         .padding()
-                        
                     }
                 }
             }
@@ -60,18 +59,6 @@ struct MarketRow: View {
             }
         }
     }
-    
-//    private func fetchTickers() async {
-//        let networkManager = NetworkManager()
-//        do {
-//            let fetchedTickers = try await networkManager.loadData()
-//            tickers = fetchedTickers
-//            isLoading = false
-//        } catch {
-//            print("Failed to fetch tickers: \(error)")
-//        }
-//        
-//    }
 }
 
 #Preview {

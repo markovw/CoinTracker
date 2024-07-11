@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TickerRow: View {
+struct TickerRow: View {  
     let ticker: Ticker
     
     var body: some View {

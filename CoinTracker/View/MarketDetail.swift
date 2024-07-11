@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MarketDetail: View {
+    @EnvironmentObject var favorites: Favorites
     let ticker: Ticker
     
     var body: some View {
@@ -21,6 +22,18 @@ struct MarketDetail: View {
                         Text("#\(ticker.marketCapRank)")
                             .foregroundStyle(.gray.opacity(1))
                     }
+                
+                Button {
+                    if favorites.contains(ticker) {
+                        favorites.remove(ticker)
+                    } else {
+                        favorites.add(ticker)
+                    }
+                } label: {
+                    Image(systemName: favorites.contains(ticker) ? "star.fill" : "star.fill")
+                }
+                .foregroundStyle(favorites.contains(ticker) ? Color(.yellow) : Color(.gray))
+                
                 Spacer()
                 
                 AsyncImage(url: URL(string: ticker.image)) { phase in
@@ -71,13 +84,8 @@ struct MarketDetail: View {
             .opacity(0.85)
             .padding()
         }
+        .environmentObject(favorites)
         
-//        Rectangle() // graph view
-//            .frame(width: UIScreen.main.bounds.width - 20, height: 300)
-//            .opacity(0.1)
-//            .overlay {
-//                Text("Graph View")
-//            }
         MarketChart(ticker: ticker)
         
         Spacer()
@@ -88,4 +96,5 @@ struct MarketDetail: View {
 
 #Preview {
     MarketDetail(ticker: Ticker(id: "ethereum", symbol: "BTC", name: "Bitcoin", image: "https://coin-images.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1696501442", currentPrice: 10000, marketCap: 1000000000000, marketCapRank: 1, marketCapChangePercentage24H: 0.5, priceChangePercentage24H: 7.2))
+        .environmentObject(Favorites())
 }

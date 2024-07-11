@@ -15,8 +15,8 @@ struct MarketTab: View {
                 .tabItem { Label("Markets", systemImage: "house") }
             MarketSearch()
                 .tabItem { Label("Search", systemImage: "magnifyingglass") }
-            MarketPortfolio()
-                .tabItem { Label("Portfolio", systemImage: "case") }
+            MarketWatchlist()
+                .tabItem { Label("Watchlist", systemImage: "circle.grid.2x2") }
         }
     }
 }

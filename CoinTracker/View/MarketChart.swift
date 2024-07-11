@@ -3,18 +3,18 @@ import Combine
 import Charts
 
 struct MarketChart: View {
-    @StateObject private var viewModel: MarketChartViewModel
+    @StateObject private var viewModel: MarketChartModel
     let ticker: Ticker
     
     init(ticker: Ticker) {
         self.ticker = ticker
-        _viewModel = StateObject(wrappedValue: MarketChartViewModel(ticker: ticker))
+        _viewModel = StateObject(wrappedValue: MarketChartModel(ticker: ticker))
     }
     
     var body: some View {
         VStack {
             Picker("Select Period", selection: $viewModel.selectedPeriod) {
-                ForEach(MarketChartViewModel.Period.allCases, id: \.self) { period in
+                ForEach(MarketChartModel.Period.allCases, id: \.self) { period in
                     Text(period.title).tag(period)
                 }
             }
@@ -27,28 +27,24 @@ struct MarketChart: View {
             Spacer()
         }
         .onChange(of: viewModel.selectedPeriod) { oldValue, newValue in
-            viewModel.fetchPrices()
+            viewModel.selectPeriod(newValue)
         }
         .navigationTitle(ticker.id.capitalized)
     }
 }
 
 struct LineChartView: View {
-    let prices: [Double]
+    let prices: [(timestamp: TimeInterval, price: Double)]
     
     var body: some View {
         Chart {
-            ForEach(prices.indices, id: \.self) { index in
+            ForEach(prices, id: \.timestamp) { price in
                 LineMark(
-                    x: .value("Time", index),
-                    y: .value("Price", prices[index])
-                )
-                .lineStyle(StrokeStyle(lineWidth: 2))
-                .foregroundStyle(Color(.green))
+                    x: .value("Time", Date(timeIntervalSince1970: price.timestamp)),
+                    y: .value("Price", price.price))
             }
-        }
-        .chartYAxis {
-            AxisMarks(position: .leading)
+            .lineStyle(StrokeStyle(lineWidth: 2))
+            .foregroundStyle(Color.green)
         }
     }
 }
