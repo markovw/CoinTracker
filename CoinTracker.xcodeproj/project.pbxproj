@@ -79,7 +79,6 @@
 				864286D82C10FF070093A8FC /* MarketDetail.swift */,
 				868996C52C1F2A9500BA8581 /* MarketChart.swift */,
 				86EB51982C354AAA00230CFD /* MarketChartModel.swift */,
-				86B34E182C401CC100F2F57D /* Favorites.swift */,
 				869CCE092C1E33EC004D8A2E /* MarketSearch.swift */,
 				869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */,
 			);
@@ -90,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8628BF642C1635F8006CF6B3 /* NetworkManager.swift */,
+				86B34E182C401CC100F2F57D /* Favorites.swift */,
 				864286D42C10FB3E0093A8FC /* Ticker.swift */,
 				8628BF662C163698006CF6B3 /* CRError.swift */,
 			);

@@ -40,6 +40,7 @@ final class NetworkManager {
                 throw CRError.invalidData
             }
             return tickers
+            
         } catch {
             throw CRError.invalidData
         }

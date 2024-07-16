@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TickerRow: View {  
+struct TickerRow: View {
     let ticker: Ticker
     
     var body: some View {
@@ -35,7 +35,7 @@ struct TickerRow: View {
         Text(ticker.currentPrice.toCurrency() + " $") // ticker price
             .fontWeight(.medium)
             .font(.subheadline)
-
+        
         HStack { // 24h percentage
             Image(systemName: ticker.priceChangePercentage24H < 0 ? "triangle.fill" : "triangle.fill")
                 .imageScale(.small)
@@ -45,4 +45,29 @@ struct TickerRow: View {
         }
     }
 }
+
+struct GridView<Content: View>: View { // generic
+    let content: () -> Content
+    
+    let columns: [GridItem] = [
+        .init(.flexible(minimum: 20, maximum: 30), alignment: .center),
+        .init(.flexible(minimum: 130), alignment: .leading),
+        .init(.flexible(minimum: 80), alignment: .trailing),
+        .init(.flexible(minimum: 60), alignment: .trailing)
+    ]
+    
+    var body: some View {
+        LazyVGrid(columns: columns, spacing: 20) {
+            Text("#")
+            Text("Market cap")
+            Text("Price")
+            Text("24h %")
+            
+            content()
+        }
+        .font(.caption)
+        .padding()
+    }
+}
+
 

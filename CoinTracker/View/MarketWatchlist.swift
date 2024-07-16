@@ -9,15 +9,33 @@ import SwiftUI
 
 struct MarketWatchlist: View {
     @EnvironmentObject var favorites: Favorites
-
+    @EnvironmentObject var viewModel: MarketRowModel
     
     var body: some View {
-        Label("There is will be the crypto watchlist", systemImage: "case")
-
         // list of favorites
+        NavigationStack {
+            ScrollView {
+                GridView {
+                    ForEach(viewModel.filteredTickers(favorites: favorites)) { ticker in
+                        TickerRow(ticker: ticker)
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("Watchlist").font(.title2.bold())
+                }
+            }
+        }
+        .onAppear {
+            Task {
+                await viewModel.fetchTickers()
+            }
+        }
     }
 }
 
 #Preview {
     MarketWatchlist()
+        .environmentObject(MarketRowModel())
 }

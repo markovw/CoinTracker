@@ -21,4 +21,8 @@ import SwiftUI
             print("Failed to fetch tickers: \(error)")
         }
     }
+    
+    func filteredTickers(favorites: Favorites) -> [Ticker] {
+        return tickers.filter { favorites.contains($0) }
+    }
 }
