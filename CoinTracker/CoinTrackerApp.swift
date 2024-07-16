@@ -11,7 +11,6 @@ import SwiftUI
 struct CoinTrackerApp: App {
     @StateObject private var favorites = Favorites()
     @StateObject private var viewModel = MarketRowModel()
-
     
     var body: some Scene {
         WindowGroup {

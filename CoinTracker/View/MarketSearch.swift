@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct MarketSearch: View {
+    @State private var searchTerm = ""
+    @State private var tickers: [Ticker] = []
+    
+    var filteredTickers: [Ticker] {
+        guard !searchTerm.isEmpty else { return tickers }
+        return tickers.filter { $0.name.localizedCaseInsensitiveContains(searchTerm)}
+    }
+    
     var body: some View {
-        Label("Search Page", systemImage: "magnifyingglass")
+        NavigationStack {
+            List {
+                ZStack {
+
+                }
+                
+            }
+        }
+        .searchable(text: $searchTerm, prompt: "Search coins")
     }
 }
 
-#Preview {
-    MarketSearch()
-}

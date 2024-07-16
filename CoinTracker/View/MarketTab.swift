@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MarketTab: View {
-    
     var body: some View {
         TabView {
             MarketRow()

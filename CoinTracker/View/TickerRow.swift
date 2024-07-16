@@ -47,6 +47,8 @@ struct TickerRow: View {
 }
 
 struct GridView<Content: View>: View { // generic
+    @EnvironmentObject var viewModel: MarketRowModel
+    
     let content: () -> Content
     
     let columns: [GridItem] = [
@@ -59,8 +61,18 @@ struct GridView<Content: View>: View { // generic
     var body: some View {
         LazyVGrid(columns: columns, spacing: 20) {
             Text("#")
+                .onTapGesture {
+                    Task {
+                        await viewModel.sortByMarketCap()
+                    }
+                }
             Text("Market cap")
             Text("Price")
+                .onTapGesture {
+                    Task {
+                        await viewModel.sortByPrice()
+                    }
+                }
             Text("24h %")
             
             content()

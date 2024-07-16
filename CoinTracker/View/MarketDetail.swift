@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MarketDetail: View {
-    @EnvironmentObject var favorites: Favorites
+    @StateObject private var alertManager = AlertManager()
+    @EnvironmentObject private var favorites: Favorites
     let ticker: Ticker
     
     var body: some View {
@@ -28,6 +29,7 @@ struct MarketDetail: View {
                         favorites.remove(ticker)
                     } else {
                         favorites.add(ticker)
+                        alertManager.show(message: "\(ticker.name) is now on your Watchlist!")
                     }
                 } label: {
                     Image(systemName: favorites.contains(ticker) ? "star.fill" : "star.fill")
@@ -89,8 +91,9 @@ struct MarketDetail: View {
         MarketChart(ticker: ticker)
         
         Spacer()
-        
             .toolbar(.hidden, for: .tabBar)
+        
+        AlertView(alertManager: alertManager)
     }
 }
 

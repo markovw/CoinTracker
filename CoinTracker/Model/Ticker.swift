@@ -18,3 +18,9 @@ struct Ticker: Codable, Identifiable {
     var marketCapChangePercentage24H: Double
     var priceChangePercentage24H: Double
 }
+
+extension Ticker {
+    static func sortedByMarketCapRankDescending(_ tickers: [Ticker]) -> [Ticker] {
+        return tickers.sorted { $0.marketCapRank > $1.marketCapRank }
+    }
+}
