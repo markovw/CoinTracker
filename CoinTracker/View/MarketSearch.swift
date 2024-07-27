@@ -9,23 +9,22 @@ import SwiftUI
 
 struct MarketSearch: View {
     @State private var searchTerm = ""
-    @State private var tickers: [Ticker] = []
+    @EnvironmentObject var viewModel: MarketRowModel
     
     var filteredTickers: [Ticker] {
-        guard !searchTerm.isEmpty else { return tickers }
-        return tickers.filter { $0.name.localizedCaseInsensitiveContains(searchTerm)}
+        guard !searchTerm.isEmpty else { return viewModel.tickers }
+        return viewModel.tickers.filter { $0.name.localizedCaseInsensitiveContains(searchTerm) }
     }
     
     var body: some View {
         NavigationStack {
-            List {
-                ZStack {
-
-                }
-                
+            TickerList(tickers: filteredTickers)
+        }
+        .onAppear {
+            Task {
+                await viewModel.fetchTickers()
             }
         }
         .searchable(text: $searchTerm, prompt: "Search coins")
     }
 }
-

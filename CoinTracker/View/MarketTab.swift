@@ -20,6 +20,3 @@ struct MarketTab: View {
     }
 }
 
-#Preview {
-    MarketTab()
-}

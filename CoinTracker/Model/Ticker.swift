@@ -24,3 +24,11 @@ extension Ticker {
         return tickers.sorted { $0.marketCapRank > $1.marketCapRank }
     }
 }
+
+extension Ticker {
+    static var exampleTickers: [Ticker] {
+        [
+            Ticker(id: "bitcoin", symbol: "BTC", name: "BTC", image: "bitcoinlogo", currentPrice: 64000, marketCap: 1.36, marketCapRank: 1, marketCapChangePercentage24H: 2.07, priceChangePercentage24H: 2.25)
+        ]
+    }
+}
