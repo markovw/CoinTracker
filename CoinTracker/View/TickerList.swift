@@ -43,7 +43,7 @@ struct TickerList: View {
                     .font(.footnote)
                 }
             }
-            .listStyle(.plain)
+            .listStyle(.inset)
         }
     }
 }
