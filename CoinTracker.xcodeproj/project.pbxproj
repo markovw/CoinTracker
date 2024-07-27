@@ -10,10 +10,13 @@
 		860C2FBC2C205C80004799C9 /* TickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C2FBB2C205C80004799C9 /* TickerRow.swift */; };
 		860C2FBE2C207F8F004799C9 /* MarketRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */; };
 		8614D1DA2C552872006FF8B8 /* TickerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614D1D92C552872006FF8B8 /* TickerList.swift */; };
-		8614D1DC2C553A73006FF8B8 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614D1DB2C553A73006FF8B8 /* Triangle.swift */; };
+		8614D1DC2C553A73006FF8B8 /* PriceChangeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */; };
 		8614D1DE2C553BA2006FF8B8 /* TickerGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614D1DD2C553BA2006FF8B8 /* TickerGrid.swift */; };
 		8628BF652C1635F8006CF6B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628BF642C1635F8006CF6B3 /* NetworkManager.swift */; };
 		8628BF672C163698006CF6B3 /* CRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628BF662C163698006CF6B3 /* CRError.swift */; };
+		863C38FB2C559B9B0062634C /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863C38FA2C559B9B0062634C /* LottieAnimation.swift */; };
+		863C38FE2C559C560062634C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 863C38FD2C559C560062634C /* Lottie */; };
+		863C39002C559D0E0062634C /* LoginAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 863C38FF2C559D0E0062634C /* LoginAnimation.json */; };
 		864286D52C10FB3E0093A8FC /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864286D42C10FB3E0093A8FC /* Ticker.swift */; };
 		864286D92C10FF070093A8FC /* MarketDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864286D82C10FF070093A8FC /* MarketDetail.swift */; };
 		868996C62C1F2A9500BA8581 /* MarketChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868996C52C1F2A9500BA8581 /* MarketChart.swift */; };
@@ -35,10 +38,12 @@
 		860C2FBB2C205C80004799C9 /* TickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRow.swift; sourceTree = "<group>"; };
 		860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowModel.swift; sourceTree = "<group>"; };
 		8614D1D92C552872006FF8B8 /* TickerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerList.swift; sourceTree = "<group>"; };
-		8614D1DB2C553A73006FF8B8 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChangeTriangle.swift; sourceTree = "<group>"; };
 		8614D1DD2C553BA2006FF8B8 /* TickerGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerGrid.swift; sourceTree = "<group>"; };
 		8628BF642C1635F8006CF6B3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8628BF662C163698006CF6B3 /* CRError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRError.swift; sourceTree = "<group>"; };
+		863C38FA2C559B9B0062634C /* LottieAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimation.swift; sourceTree = "<group>"; };
+		863C38FF2C559D0E0062634C /* LoginAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoginAnimation.json; sourceTree = "<group>"; };
 		864286D42C10FB3E0093A8FC /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		864286D82C10FF070093A8FC /* MarketDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetail.swift; sourceTree = "<group>"; };
 		868996C52C1F2A9500BA8581 /* MarketChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketChart.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863C38FE2C559C560062634C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,7 @@
 				860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */,
 				860C2FBB2C205C80004799C9 /* TickerRow.swift */,
 				8614D1DD2C553BA2006FF8B8 /* TickerGrid.swift */,
+				863C38FA2C559B9B0062634C /* LottieAnimation.swift */,
 				8614D1D92C552872006FF8B8 /* TickerList.swift */,
 				864286D82C10FF070093A8FC /* MarketDetail.swift */,
 				868996C52C1F2A9500BA8581 /* MarketChart.swift */,
@@ -102,7 +109,7 @@
 				8628BF642C1635F8006CF6B3 /* NetworkManager.swift */,
 				86B34E182C401CC100F2F57D /* Favorites.swift */,
 				864286D42C10FB3E0093A8FC /* Ticker.swift */,
-				8614D1DB2C553A73006FF8B8 /* Triangle.swift */,
+				8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */,
 				8628BF662C163698006CF6B3 /* CRError.swift */,
 			);
 			path = Model;
@@ -132,6 +139,7 @@
 				869CCE0E2C1E35E4004D8A2E /* Model */,
 				860C2FBF2C209248004799C9 /* Ext */,
 				86E4180E2C0F6F9C008F1B01 /* Assets.xcassets */,
+				863C38FF2C559D0E0062634C /* LoginAnimation.json */,
 				86E418102C0F6F9C008F1B01 /* Preview Content */,
 			);
 			path = CoinTracker;
@@ -161,6 +169,9 @@
 			dependencies = (
 			);
 			name = CoinTracker;
+			packageProductDependencies = (
+				863C38FD2C559C560062634C /* Lottie */,
+			);
 			productName = CoinTracker;
 			productReference = 86E418072C0F6F9B008F1B01 /* CoinTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +200,9 @@
 				Base,
 			);
 			mainGroup = 86E417FE2C0F6F9B008F1B01;
+			packageReferences = (
+				863C38FC2C559C560062634C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 86E418082C0F6F9B008F1B01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -204,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86E418122C0F6F9C008F1B01 /* Preview Assets.xcassets in Resources */,
+				863C39002C559D0E0062634C /* LoginAnimation.json in Resources */,
 				86E4180F2C0F6F9C008F1B01 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,8 +233,9 @@
 				869CCE0C2C1E3492004D8A2E /* MarketWatchlist.swift in Sources */,
 				860C2FBC2C205C80004799C9 /* TickerRow.swift in Sources */,
 				8628BF652C1635F8006CF6B3 /* NetworkManager.swift in Sources */,
-				8614D1DC2C553A73006FF8B8 /* Triangle.swift in Sources */,
+				8614D1DC2C553A73006FF8B8 /* PriceChangeTriangle.swift in Sources */,
 				86B5950E2C46DEF400DCFAD6 /* AlertManager.swift in Sources */,
+				863C38FB2C559B9B0062634C /* LottieAnimation.swift in Sources */,
 				869CCE0A2C1E33EC004D8A2E /* MarketSearch.swift in Sources */,
 				86DB30A22C395663008B3731 /* Keys.swift in Sources */,
 				86E4180D2C0F6F9B008F1B01 /* MarketTab.swift in Sources */,
@@ -440,6 +456,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		863C38FC2C559C560062634C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		863C38FD2C559C560062634C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 863C38FC2C559C560062634C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86E417FF2C0F6F9B008F1B01 /* Project object */;
 }

@@ -35,7 +35,9 @@ struct MarketRow: View {
                 }
             }
             .refreshable {
-                await viewModel.fetchTickers()
+                do {
+                    await viewModel.fetchTickers()
+                }
             }
         }
         .onAppear {

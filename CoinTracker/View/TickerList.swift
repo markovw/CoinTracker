@@ -37,7 +37,7 @@ struct TickerList: View {
                         .font(.subheadline)
                     
                     HStack { // 24h percentage
-                        Triangle(ticker: ticker)
+                        PriceChangeTriangle(ticker: ticker)
                         Text(ticker.priceChangePercentage24H.toPercentString())
                     }
                     .font(.footnote)

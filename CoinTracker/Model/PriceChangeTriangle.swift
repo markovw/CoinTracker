@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Triangle: View {
+struct PriceChangeTriangle: View {
     var ticker: Ticker
 
     var body: some View {

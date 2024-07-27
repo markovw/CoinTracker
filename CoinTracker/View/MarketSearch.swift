@@ -29,6 +29,11 @@ struct MarketSearch: View {
             
             TickerList(tickers: filteredTickers)
         }
+        .refreshable {
+            do {
+                await viewModel.fetchTickers()
+            }
+        }
         .onAppear {
             Task {
                 await viewModel.fetchTickers()
