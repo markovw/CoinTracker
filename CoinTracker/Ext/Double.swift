@@ -37,7 +37,10 @@ extension Double {
     }
     
     func toPercentString() -> String {
-        guard let numberAsString = numberFormatter.string(for: self) else { return ""}
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 2
+        guard let numberAsString = numberFormatter.string(for: abs(self)) else { return "" }
         return numberAsString + "%"
     }
     

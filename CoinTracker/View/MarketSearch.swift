@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct MarketSearch: View {
     @State private var searchTerm = ""
@@ -27,7 +28,9 @@ struct MarketSearch: View {
                 .focused($isSearchFocused)
                 .padding(.vertical)
             
-            TickerList(tickers: filteredTickers)
+            withAnimation(.spring(duration: 0.5)) {
+                TickerList(tickers: filteredTickers)
+            }
         }
         .refreshable {
             do {
@@ -42,8 +45,11 @@ struct MarketSearch: View {
     }
 }
 
+// MARK: SearchBar -------------
+
 struct CustomSearchBar: View {
     @Binding var searchTerm: String
+//    @State var isVisible: Bool = true
     
     var body: some View {
         HStack {
@@ -54,8 +60,24 @@ struct CustomSearchBar: View {
             TextField("Search coins or addresses...", text: $searchTerm)
                 .foregroundColor(.primary)
                 .accentColor(.primary)
+                .autocorrectionDisabled()
             
             Spacer()
+            
+//            if searchTerm == "Hello Kitty" {
+//                LottieView(animation: .named("CatAnimation"))
+//                    .configure( { lottieAnimationView in
+//                        lottieAnimationView.contentMode = .scaleAspectFit
+//                    })
+//                    .playbackMode(.playing(.toProgress(1, loopMode: .loop)))
+//                    .frame(width: 150, height: 120)
+//                    .onTapGesture {
+//                        isVisible = false
+//                        searchTerm = ""
+//                    }
+//                    .opacity(isVisible ? 1 : 0)
+//            }
+            
             if !searchTerm.isEmpty {
                 Image(systemName: "xmark.circle.fill")
                     .resizable()

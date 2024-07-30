@@ -27,6 +27,7 @@ struct GridView<Content: View>: View { // generic
                         await viewModel.sortByMarketCap()
                     }
                 }
+            
             Text("Market cap")
             Text("Price")
                 .onTapGesture {

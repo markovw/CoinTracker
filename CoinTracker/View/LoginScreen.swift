@@ -9,7 +9,7 @@ import SwiftUI
 import Lottie
 import AuthenticationServices
 
-struct LottieAnimation: View {
+struct LoginScreen: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -40,13 +40,11 @@ struct LottieAnimation: View {
                     .cornerRadius(10)
 
                 }
-                
-
             }
         }
     }
 }
 
 #Preview {
-    LottieAnimation()
+    LoginScreen()
 }

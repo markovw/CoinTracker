@@ -21,3 +21,15 @@ struct PriceChangeTriangle: View {
     }
 }
 
+struct Triangle: View {
+    var body: some View {
+        HStack {
+            Image(systemName: "triangle.fill")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 8, height: 8)
+                .foregroundStyle(.blue)
+        }
+    }
+}
+

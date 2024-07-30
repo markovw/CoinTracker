@@ -17,7 +17,7 @@ struct CoinTrackerApp: App {
 //            MarketTab()
 //                .environmentObject(favorites)
 //                .environmentObject(viewModel)
-            LottieAnimation()
+            LoginScreen()
                 .environmentObject(favorites)
                 .environmentObject(viewModel)
         }

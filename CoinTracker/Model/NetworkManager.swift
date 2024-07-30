@@ -15,7 +15,7 @@ final class NetworkManager {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         let queryItems: [URLQueryItem] = [
           URLQueryItem(name: "vs_currency", value: "usd"),
-          URLQueryItem(name: "per_page", value: "100"),
+          URLQueryItem(name: "per_page", value: "300"),
           URLQueryItem(name: "sparkline", value: "true")]
         components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
 

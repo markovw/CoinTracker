@@ -18,8 +18,10 @@ import SwiftUI
         let networkManager = NetworkManager()
         do {
             let fetchedTickers = try await networkManager.loadData()
-            tickers = fetchedTickers
-            isLoading = false
+            withAnimation(.spring(duration: 0.5)) {
+                tickers = fetchedTickers
+                isLoading = false
+            }
         } catch {
             print("Failed to fetch tickers: \(error)")
         }

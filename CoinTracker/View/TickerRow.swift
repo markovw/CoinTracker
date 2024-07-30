@@ -34,14 +34,18 @@ struct TickerRow: View {
         
         Text(ticker.currentPrice.toCurrency() + " $") // ticker price
             .fontWeight(.medium)
-            .font(.subheadline)
+            .font(.system(size: 14))
         
         HStack { // 24h percentage
             PriceChangeTriangle(ticker: ticker)
             Text(ticker.priceChangePercentage24H.toPercentString())
+                .fontWeight(.medium)
+                .foregroundColor(ticker.priceChangePercentage24H < 0 ? .red : .green)
         }
     }
 }
 
-
+#Preview {
+    TickerRow(ticker: Ticker(id: "BTC", symbol: "BTC", name: "Bitcoin", image: "", currentPrice: 67000, marketCap: 1.35, marketCapRank: 1, marketCapChangePercentage24H: 1.02, priceChangePercentage24H: 1.05))
+}
 

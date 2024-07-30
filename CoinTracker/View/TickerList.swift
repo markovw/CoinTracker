@@ -41,6 +41,8 @@ struct TickerList: View {
                         Text(ticker.priceChangePercentage24H.toPercentString())
                     }
                     .font(.footnote)
+                    .fontWeight(.medium)
+                    .foregroundColor(ticker.priceChangePercentage24H < 0 ? .red : .green)
                 }
             }
             .listStyle(.inset)
