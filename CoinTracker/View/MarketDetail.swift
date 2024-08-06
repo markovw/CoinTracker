@@ -85,15 +85,15 @@ struct MarketDetail: View {
             .frame(width: UIScreen.main.bounds.width - 20, height: 150)
             .opacity(0.85)
             .padding()
+            MarketChart(ticker: ticker)
+            
+            Spacer()
+                .toolbar(.hidden, for: .tabBar)
+            
+            AlertView(alertManager: alertManager)
         }
         .environmentObject(favorites)
-        
-        MarketChart(ticker: ticker)
-        
-        Spacer()
-            .toolbar(.hidden, for: .tabBar)
-        
-        AlertView(alertManager: alertManager)
+        .background(Color("backgroundColor"))
     }
 }
 

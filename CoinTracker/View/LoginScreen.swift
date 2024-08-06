@@ -42,6 +42,7 @@ struct LoginScreen: View {
                 }
             }
         }
+        .background(Color("backgroundColor"))
     }
 }
 

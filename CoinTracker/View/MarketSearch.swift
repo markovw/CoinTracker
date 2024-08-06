@@ -24,6 +24,7 @@ struct MarketSearch: View {
     
     var body: some View {
         NavigationStack {
+        
             CustomSearchBar(searchTerm: $searchTerm)
                 .focused($isSearchFocused)
                 .padding(.vertical)

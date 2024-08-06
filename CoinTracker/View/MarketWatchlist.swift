@@ -32,6 +32,7 @@ struct MarketWatchlist: View {
                 await viewModel.fetchTickers()
             }
         }
+        .background(Color("backgroundColor"))
     }
 }
 
