@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860847632C6534C20087B5BD /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860847622C6534C20087B5BD /* InfoCard.swift */; };
 		860C2FBC2C205C80004799C9 /* TickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C2FBB2C205C80004799C9 /* TickerRow.swift */; };
 		860C2FBE2C207F8F004799C9 /* MarketRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */; };
 		8614D1DA2C552872006FF8B8 /* TickerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614D1D92C552872006FF8B8 /* TickerList.swift */; };
@@ -15,7 +16,6 @@
 		8628BF652C1635F8006CF6B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628BF642C1635F8006CF6B3 /* NetworkManager.swift */; };
 		8628BF672C163698006CF6B3 /* CRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628BF662C163698006CF6B3 /* CRError.swift */; };
 		863C38FB2C559B9B0062634C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863C38FA2C559B9B0062634C /* LoginScreen.swift */; };
-		863C38FE2C559C560062634C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 863C38FD2C559C560062634C /* Lottie */; };
 		863C39002C559D0E0062634C /* LoginAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 863C38FF2C559D0E0062634C /* LoginAnimation.json */; };
 		864286D52C10FB3E0093A8FC /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864286D42C10FB3E0093A8FC /* Ticker.swift */; };
 		864286D92C10FF070093A8FC /* MarketDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864286D82C10FF070093A8FC /* MarketDetail.swift */; };
@@ -27,6 +27,7 @@
 		86AA223B2C5863CA008C7B78 /* CatAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 86AA223A2C5863CA008C7B78 /* CatAnimation.json */; };
 		86B34E192C401CC100F2F57D /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B34E182C401CC100F2F57D /* Favorites.swift */; };
 		86B5950E2C46DEF400DCFAD6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */; };
+		86B9485A2C630B6A00E873B9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 86B948592C630B6A00E873B9 /* Lottie */; };
 		86DB30A22C395663008B3731 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB30A12C395663008B3731 /* Keys.swift */; };
 		86E4180B2C0F6F9B008F1B01 /* CoinTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4180A2C0F6F9B008F1B01 /* CoinTrackerApp.swift */; };
 		86E4180D2C0F6F9B008F1B01 /* MarketTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4180C2C0F6F9B008F1B01 /* MarketTab.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		860847622C6534C20087B5BD /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 		860C2FBB2C205C80004799C9 /* TickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRow.swift; sourceTree = "<group>"; };
 		860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowModel.swift; sourceTree = "<group>"; };
 		8614D1D92C552872006FF8B8 /* TickerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerList.swift; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				863C38FE2C559C560062634C /* Lottie in Frameworks */,
+				86B9485A2C630B6A00E873B9 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +81,7 @@
 		860C2FBF2C209248004799C9 /* Ext */ = {
 			isa = PBXGroup;
 			children = (
+				860847622C6534C20087B5BD /* InfoCard.swift */,
 				868996C72C202F1000BA8581 /* Double.swift */,
 				86DB30A12C395663008B3731 /* Keys.swift */,
 			);
@@ -90,14 +93,12 @@
 			children = (
 				86E4180C2C0F6F9B008F1B01 /* MarketTab.swift */,
 				869263BD2C1CCC7D00A280EA /* MarketRow.swift */,
-				860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */,
 				860C2FBB2C205C80004799C9 /* TickerRow.swift */,
 				8614D1DD2C553BA2006FF8B8 /* TickerGrid.swift */,
-				863C38FA2C559B9B0062634C /* LoginScreen.swift */,
 				8614D1D92C552872006FF8B8 /* TickerList.swift */,
+				863C38FA2C559B9B0062634C /* LoginScreen.swift */,
 				864286D82C10FF070093A8FC /* MarketDetail.swift */,
 				868996C52C1F2A9500BA8581 /* MarketChart.swift */,
-				86EB51982C354AAA00230CFD /* MarketChartModel.swift */,
 				869CCE092C1E33EC004D8A2E /* MarketSearch.swift */,
 				869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */,
 			);
@@ -107,8 +108,10 @@
 		869CCE0E2C1E35E4004D8A2E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */,
 				8628BF642C1635F8006CF6B3 /* NetworkManager.swift */,
+				86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */,
+				86EB51982C354AAA00230CFD /* MarketChartModel.swift */,
+				860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */,
 				86B34E182C401CC100F2F57D /* Favorites.swift */,
 				864286D42C10FB3E0093A8FC /* Ticker.swift */,
 				8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */,
@@ -173,7 +176,7 @@
 			);
 			name = CoinTracker;
 			packageProductDependencies = (
-				863C38FD2C559C560062634C /* Lottie */,
+				86B948592C630B6A00E873B9 /* Lottie */,
 			);
 			productName = CoinTracker;
 			productReference = 86E418072C0F6F9B008F1B01 /* CoinTracker.app */;
@@ -204,7 +207,7 @@
 			);
 			mainGroup = 86E417FE2C0F6F9B008F1B01;
 			packageReferences = (
-				863C38FC2C559C560062634C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				86B948582C630B6A00E873B9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 86E418082C0F6F9B008F1B01 /* Products */;
 			projectDirPath = "";
@@ -239,6 +242,7 @@
 				8628BF652C1635F8006CF6B3 /* NetworkManager.swift in Sources */,
 				8614D1DC2C553A73006FF8B8 /* PriceChangeTriangle.swift in Sources */,
 				86B5950E2C46DEF400DCFAD6 /* AlertManager.swift in Sources */,
+				860847632C6534C20087B5BD /* InfoCard.swift in Sources */,
 				863C38FB2C559B9B0062634C /* LoginScreen.swift in Sources */,
 				869CCE0A2C1E33EC004D8A2E /* MarketSearch.swift in Sources */,
 				86DB30A22C395663008B3731 /* Keys.swift in Sources */,
@@ -396,6 +400,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,6 +430,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +468,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		863C38FC2C559C560062634C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		86B948582C630B6A00E873B9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -473,9 +479,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		863C38FD2C559C560062634C /* Lottie */ = {
+		86B948592C630B6A00E873B9 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 863C38FC2C559C560062634C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 86B948582C630B6A00E873B9 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 class AlertManager: ObservableObject {
     @Published var showAlert = false
@@ -13,35 +14,38 @@ class AlertManager: ObservableObject {
     
     func show(message: String) {
         alertMessage = message
-        withAnimation {
+        withAnimation(.easeInOut(duration: 0.5)) {
             showAlert = true
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
-            withAnimation(.easeOut) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            withAnimation(.easeInOut(duration: 0.5)) {
                 self.showAlert = false
             }
-            
         }
     }
 }
 
 struct AlertView: View {
     @ObservedObject var alertManager: AlertManager
+    let ticker: Ticker
     
     var body: some View {
-        if alertManager.showAlert {
-            VStack {
+        VStack {
+            if alertManager.showAlert {
+                Spacer()
+                
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(.gray).opacity(0.2)
+                    .foregroundStyle(Color("alertColor"))
                     .frame(height: 40)
                     .padding()
                     .overlay {
-                        Text(alertManager.alertMessage).font(.headline)
+                        Text(alertManager.alertMessage)
+                            .font(.subheadline).bold()
+                            .padding()
                     }
+                    .transition(AnyTransition.move(edge: .bottom).combined(with: .opacity))
             }
-            .animation(.spring, value: alertManager.showAlert)
-            .transition(.move(edge: .bottom))
         }
     }
 }

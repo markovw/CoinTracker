@@ -45,7 +45,7 @@ class MarketChartModel: ObservableObject {
     
     private func fetchAllPrices() {
         let now = Date().timeIntervalSince1970
-        let oneYearAgo = now - 365 * 24 * 60 * 60 // Since beginning of time to now
+        let oneYearAgo = now - 365 * 24 * 60 * 60
         
         api.fetchPrices(for: ticker.id, from: oneYearAgo, to: now)
             .receive(on: DispatchQueue.main)
@@ -62,12 +62,12 @@ class MarketChartModel: ObservableObject {
                     self?.allPrices = prices.map { price in
                         (timestamp: price[0], price: price[1])
                     }
-                    self?.updatePrices(for: .day)
+                    self?.updatePrices(for: self?.selectedPeriod ?? .day)
                 }
             )
             .store(in: &cancellables)
     }
-    
+
     private func updatePrices(for period: Period) {
         print("updatePrices started for period: \(period)")
         let now = Date().timeIntervalSince1970
@@ -78,12 +78,12 @@ class MarketChartModel: ObservableObject {
             
             let filteredPrices = self.allPrices.filter { $0.timestamp >= startTime }
             
-            // Limit the number of points to 1000
             let stride = max(1, filteredPrices.count / 1000)
             let limitedPrices = stride > 1 ? filteredPrices.enumerated().compactMap { $0.offset % stride == 0 ? $0.element : nil } : filteredPrices
             
             DispatchQueue.main.async {
-                self.prices = Array(limitedPrices)
+                self.prices = limitedPrices
+                self.objectWillChange.send()
                 print("Updated prices for period \(period.title): \(self.prices.count) data points")
             }
         }

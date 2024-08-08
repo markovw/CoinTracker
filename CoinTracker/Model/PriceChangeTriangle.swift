@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PriceChangeTriangle: View {
     var ticker: Ticker
-
+    
     var body: some View {
         HStack {
             Image(systemName: ticker.priceChangePercentage24H < 0 ? "triangle.fill" : "triangle.fill")

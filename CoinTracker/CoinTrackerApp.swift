@@ -14,9 +14,6 @@ struct CoinTrackerApp: App {
         
     var body: some Scene {
         WindowGroup {
-//            MarketTab()
-//                .environmentObject(favorites)
-//                .environmentObject(viewModel)
             LoginScreen()
                 .environmentObject(favorites)
                 .environmentObject(viewModel)

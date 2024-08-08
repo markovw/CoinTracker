@@ -22,6 +22,7 @@ struct LoginScreen: View {
                 .animationDidFinish { completed in
                     
                 }
+            
             VStack {
                 NavigationLink {
                     MarketTab()
@@ -38,7 +39,6 @@ struct LoginScreen: View {
                     .frame(height: 50)
                     .padding()
                     .cornerRadius(10)
-
                 }
             }
         }

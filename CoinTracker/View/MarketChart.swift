@@ -5,12 +5,12 @@ import Charts
 struct MarketChart: View {
     @StateObject private var viewModel: MarketChartModel
     let ticker: Ticker
-    
+
     init(ticker: Ticker) {
         self.ticker = ticker
         _viewModel = StateObject(wrappedValue: MarketChartModel(ticker: ticker))
     }
-    
+
     var body: some View {
         VStack {
             Picker("Select Period", selection: $viewModel.selectedPeriod) {
@@ -22,14 +22,17 @@ struct MarketChart: View {
             .padding()
             
             LineChartView(prices: viewModel.prices)
-                    .frame(height: 300)
-    
+                .frame(height: 300)
+
             Spacer()
         }
         .onChange(of: viewModel.selectedPeriod) { oldValue, newValue in
             viewModel.selectPeriod(newValue)
         }
         .navigationTitle(ticker.id.capitalized)
+        .onAppear {
+            viewModel.selectPeriod(viewModel.selectedPeriod)
+        }
     }
 }
 

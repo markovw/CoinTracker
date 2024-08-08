@@ -17,6 +17,10 @@ struct Ticker: Codable, Identifiable {
     var marketCapRank: Int
     var marketCapChangePercentage24H: Double
     var priceChangePercentage24H: Double
+    var atl: Double
+    var atlChangePercentage: Double
+    var ath: Double
+    var athChangePercentage: Double
 }
 
 extension Ticker {
@@ -28,7 +32,7 @@ extension Ticker {
 extension Ticker {
     static var exampleTickers: [Ticker] {
         [
-            Ticker(id: "bitcoin", symbol: "BTC", name: "BTC", image: "bitcoinlogo", currentPrice: 64000, marketCap: 1.36, marketCapRank: 1, marketCapChangePercentage24H: 2.07, priceChangePercentage24H: 2.25)
+            Ticker(id: "bitcoin", symbol: "BTC", name: "BTC", image: "bitcoinlogo", currentPrice: 64000, marketCap: 1.36, marketCapRank: 1, marketCapChangePercentage24H: 2.07, priceChangePercentage24H: 2.25, atl: 2.0, atlChangePercentage: 2.1, ath: 2.0, athChangePercentage: 2.1)
         ]
     }
 }

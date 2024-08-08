@@ -24,7 +24,6 @@ struct MarketSearch: View {
     
     var body: some View {
         NavigationStack {
-        
             CustomSearchBar(searchTerm: $searchTerm)
                 .focused($isSearchFocused)
                 .padding(.vertical)
@@ -50,7 +49,6 @@ struct MarketSearch: View {
 
 struct CustomSearchBar: View {
     @Binding var searchTerm: String
-//    @State var isVisible: Bool = true
     
     var body: some View {
         HStack {
@@ -64,20 +62,6 @@ struct CustomSearchBar: View {
                 .autocorrectionDisabled()
             
             Spacer()
-            
-//            if searchTerm == "Hello Kitty" {
-//                LottieView(animation: .named("CatAnimation"))
-//                    .configure( { lottieAnimationView in
-//                        lottieAnimationView.contentMode = .scaleAspectFit
-//                    })
-//                    .playbackMode(.playing(.toProgress(1, loopMode: .loop)))
-//                    .frame(width: 150, height: 120)
-//                    .onTapGesture {
-//                        isVisible = false
-//                        searchTerm = ""
-//                    }
-//                    .opacity(isVisible ? 1 : 0)
-//            }
             
             if !searchTerm.isEmpty {
                 Image(systemName: "xmark.circle.fill")
