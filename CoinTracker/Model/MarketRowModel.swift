@@ -13,7 +13,6 @@ import SwiftUI
     @Published var isMarketCapSorted: Bool = false
     @Published var isPriceSorted: Bool = false
     
-    
     func fetchTickers() async {
         let networkManager = NetworkManager()
         do {

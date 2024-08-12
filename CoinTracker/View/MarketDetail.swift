@@ -51,9 +51,9 @@ struct MarketDetail: View {
                     .padding()
                     
                     HStack {
-                        InfoCardView(title: "Current Price", value: ticker.currentPrice.toCurrency() + " $", changePercentage: ticker.priceChangePercentage24H)
+                        InfoCard(title: "Current Price", value: ticker.currentPrice.toCurrency() + " $", changePercentage: ticker.priceChangePercentage24H)
                         
-                        InfoCardView(title: "Market Cap", value: ("\(String(format: "%.2f", ticker.marketCap / 1000000000)) $ B"), changePercentage: ticker.marketCapChangePercentage24H)
+                        InfoCard(title: "Market Cap", value: ("\(String(format: "%.2f", ticker.marketCap / 1000000000)) $ B"), changePercentage: ticker.marketCapChangePercentage24H)
                     }
                     .frame(width: UIScreen.main.bounds.width - 20, height: 150)
                     .padding()

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InfoCardView: View {
+struct InfoCard: View {
     let title: String
     let value: String
     let changePercentage: Double
@@ -18,7 +18,7 @@ struct InfoCardView: View {
                 VStack {
                     Text(title).font(.headline).bold().opacity(0.7)
                     
-                    Text(value).font(.headline.bold())
+                    Text(value).font(.system(size: 18, weight: .bold)).padding(.top, 1)
                     
                     ChangeIndicatorView(changePercentage: changePercentage)
                 }

@@ -41,6 +41,7 @@ struct AlertView: View {
                     .padding()
                     .overlay {
                         Text(alertManager.alertMessage)
+                            .foregroundStyle(.black)
                             .font(.subheadline).bold()
                             .padding()
                     }

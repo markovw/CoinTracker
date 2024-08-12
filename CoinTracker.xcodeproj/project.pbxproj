@@ -24,6 +24,7 @@
 		869263BE2C1CCC7D00A280EA /* MarketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869263BD2C1CCC7D00A280EA /* MarketRow.swift */; };
 		869CCE0A2C1E33EC004D8A2E /* MarketSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CCE092C1E33EC004D8A2E /* MarketSearch.swift */; };
 		869CCE0C2C1E3492004D8A2E /* MarketWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */; };
+		869D382A2C6ABA2000CFC8C3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D38292C6ABA2000CFC8C3 /* SearchBar.swift */; };
 		86AA223B2C5863CA008C7B78 /* CatAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 86AA223A2C5863CA008C7B78 /* CatAnimation.json */; };
 		86B34E192C401CC100F2F57D /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B34E182C401CC100F2F57D /* Favorites.swift */; };
 		86B5950E2C46DEF400DCFAD6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */; };
@@ -54,6 +55,7 @@
 		869263BD2C1CCC7D00A280EA /* MarketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRow.swift; sourceTree = "<group>"; };
 		869CCE092C1E33EC004D8A2E /* MarketSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSearch.swift; sourceTree = "<group>"; };
 		869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketWatchlist.swift; sourceTree = "<group>"; };
+		869D38292C6ABA2000CFC8C3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		86AA223A2C5863CA008C7B78 /* CatAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CatAnimation.json; sourceTree = "<group>"; };
 		86B34E182C401CC100F2F57D /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -81,7 +83,6 @@
 		860C2FBF2C209248004799C9 /* Ext */ = {
 			isa = PBXGroup;
 			children = (
-				860847622C6534C20087B5BD /* InfoCard.swift */,
 				868996C72C202F1000BA8581 /* Double.swift */,
 				86DB30A12C395663008B3731 /* Keys.swift */,
 			);
@@ -100,7 +101,10 @@
 				864286D82C10FF070093A8FC /* MarketDetail.swift */,
 				868996C52C1F2A9500BA8581 /* MarketChart.swift */,
 				869CCE092C1E33EC004D8A2E /* MarketSearch.swift */,
+				869D38292C6ABA2000CFC8C3 /* SearchBar.swift */,
 				869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */,
+				860847622C6534C20087B5BD /* InfoCard.swift */,
+				8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,7 +118,6 @@
 				860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */,
 				86B34E182C401CC100F2F57D /* Favorites.swift */,
 				864286D42C10FB3E0093A8FC /* Ticker.swift */,
-				8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */,
 				8628BF662C163698006CF6B3 /* CRError.swift */,
 			);
 			path = Model;
@@ -253,6 +256,7 @@
 				868996C62C1F2A9500BA8581 /* MarketChart.swift in Sources */,
 				864286D52C10FB3E0093A8FC /* Ticker.swift in Sources */,
 				869263BE2C1CCC7D00A280EA /* MarketRow.swift in Sources */,
+				869D382A2C6ABA2000CFC8C3 /* SearchBar.swift in Sources */,
 				868996C82C202F1000BA8581 /* Double.swift in Sources */,
 				86EB51992C354AAA00230CFD /* MarketChartModel.swift in Sources */,
 				86B34E192C401CC100F2F57D /* Favorites.swift in Sources */,
