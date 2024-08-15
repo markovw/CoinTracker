@@ -28,16 +28,17 @@
 		86AA223B2C5863CA008C7B78 /* CatAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 86AA223A2C5863CA008C7B78 /* CatAnimation.json */; };
 		86B34E192C401CC100F2F57D /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B34E182C401CC100F2F57D /* Favorites.swift */; };
 		86B5950E2C46DEF400DCFAD6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */; };
-		86B9485A2C630B6A00E873B9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 86B948592C630B6A00E873B9 /* Lottie */; };
 		86DB30A22C395663008B3731 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB30A12C395663008B3731 /* Keys.swift */; };
 		86E4180B2C0F6F9B008F1B01 /* CoinTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4180A2C0F6F9B008F1B01 /* CoinTrackerApp.swift */; };
 		86E4180D2C0F6F9B008F1B01 /* MarketTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4180C2C0F6F9B008F1B01 /* MarketTab.swift */; };
 		86E4180F2C0F6F9C008F1B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E4180E2C0F6F9C008F1B01 /* Assets.xcassets */; };
 		86E418122C0F6F9C008F1B01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E418112C0F6F9C008F1B01 /* Preview Assets.xcassets */; };
 		86EB51992C354AAA00230CFD /* MarketChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB51982C354AAA00230CFD /* MarketChartModel.swift */; };
+		9FA552989B0013EFF760B690 /* Pods_CoinTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97A25BE926F722DDD275296 /* Pods_CoinTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C0467FD2FC3A119A00A621B /* Pods-CoinTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTracker.release.xcconfig"; path = "Target Support Files/Pods-CoinTracker/Pods-CoinTracker.release.xcconfig"; sourceTree = "<group>"; };
 		860847622C6534C20087B5BD /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 		860C2FBB2C205C80004799C9 /* TickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRow.swift; sourceTree = "<group>"; };
 		860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowModel.swift; sourceTree = "<group>"; };
@@ -66,6 +67,8 @@
 		86E4180E2C0F6F9C008F1B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86E418112C0F6F9C008F1B01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86EB51982C354AAA00230CFD /* MarketChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketChartModel.swift; sourceTree = "<group>"; };
+		F97A25BE926F722DDD275296 /* Pods_CoinTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC59D23442959ED1EA02D3CD /* Pods-CoinTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTracker.debug.xcconfig"; path = "Target Support Files/Pods-CoinTracker/Pods-CoinTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86B9485A2C630B6A00E873B9 /* Lottie in Frameworks */,
+				9FA552989B0013EFF760B690 /* Pods_CoinTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +131,8 @@
 			children = (
 				86E418092C0F6F9B008F1B01 /* CoinTracker */,
 				86E418082C0F6F9B008F1B01 /* Products */,
+				DA48F208C46122EA3F96D90E /* Pods */,
+				FA78032295B0C8A4E3288B13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +167,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DA48F208C46122EA3F96D90E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC59D23442959ED1EA02D3CD /* Pods-CoinTracker.debug.xcconfig */,
+				6C0467FD2FC3A119A00A621B /* Pods-CoinTracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA78032295B0C8A4E3288B13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F97A25BE926F722DDD275296 /* Pods_CoinTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,18 +191,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86E418152C0F6F9C008F1B01 /* Build configuration list for PBXNativeTarget "CoinTracker" */;
 			buildPhases = (
+				8ECD21627D09AF4D22E7292D /* [CP] Check Pods Manifest.lock */,
 				86E418032C0F6F9B008F1B01 /* Sources */,
 				86E418042C0F6F9B008F1B01 /* Frameworks */,
 				86E418052C0F6F9B008F1B01 /* Resources */,
+				7ABF7273CD1DDFE194D5558A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CoinTracker;
-			packageProductDependencies = (
-				86B948592C630B6A00E873B9 /* Lottie */,
-			);
 			productName = CoinTracker;
 			productReference = 86E418072C0F6F9B008F1B01 /* CoinTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -193,7 +214,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					86E418062C0F6F9B008F1B01 = {
 						CreatedOnToolsVersion = 15.3;
@@ -209,9 +230,6 @@
 				Base,
 			);
 			mainGroup = 86E417FE2C0F6F9B008F1B01;
-			packageReferences = (
-				86B948582C630B6A00E873B9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-			);
 			productRefGroup = 86E418082C0F6F9B008F1B01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +252,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7ABF7273CD1DDFE194D5558A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinTracker/Pods-CoinTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinTracker/Pods-CoinTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinTracker/Pods-CoinTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ECD21627D09AF4D22E7292D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86E418032C0F6F9B008F1B01 /* Sources */ = {
@@ -390,6 +450,7 @@
 		};
 		86E418162C0F6F9C008F1B01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC59D23442959ED1EA02D3CD /* Pods-CoinTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,6 +459,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CoinTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = WZ2766T64K;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -420,6 +482,7 @@
 		};
 		86E418172C0F6F9C008F1B01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C0467FD2FC3A119A00A621B /* Pods-CoinTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,6 +491,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CoinTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = WZ2766T64K;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -470,25 +534,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		86B948582C630B6A00E873B9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		86B948592C630B6A00E873B9 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 86B948582C630B6A00E873B9 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86E417FF2C0F6F9B008F1B01 /* Project object */;
 }

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Lottie
 
 struct MarketSearch: View {
     @State private var searchTerm = ""
