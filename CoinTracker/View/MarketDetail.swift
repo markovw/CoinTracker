@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct MarketDetail: View {
     @StateObject private var alertManager = AlertManager()
@@ -39,14 +40,10 @@ struct MarketDetail: View {
                         .foregroundStyle(favorites.contains(ticker) ? Color(.yellow) : Color(.gray))
                         
                         Spacer()
-                        
-                        AsyncImage(url: URL(string: ticker.image)) { phase in
-                            if let image = phase.image {
-                                image
-                                    .resizable()
-                                    .frame(width: 45, height: 45)
-                            }
-                        }
+
+                        KFImage(URL(string: ticker.image))
+                            .resizable()
+                            .frame(width: 45, height: 45)
                     }
                     .padding()
                     

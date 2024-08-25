@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct TickerList: View {
     var tickers: [Ticker]
@@ -15,14 +16,12 @@ struct TickerList: View {
             NavigationLink(destination: MarketDetail(ticker: ticker)) {
                 HStack {
                     HStack(spacing: 8) { // ticker + marketcap
-                        AsyncImage(url: URL(string: ticker.image)) { phase in
-                            if let image = phase.image {
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 25, height: 25)
-                            }
-                        }
+
+                        KFImage(URL(string: ticker.image))
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25)
+                        
                         VStack(alignment: .leading, spacing: 5) {
                             Text(ticker.symbol.uppercased()).fontWeight(.medium)
                                 .font(.headline)

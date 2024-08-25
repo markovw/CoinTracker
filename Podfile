@@ -7,5 +7,6 @@ target 'CoinTracker' do
 
   # Pods for CoinTracker
   pod 'lottie-ios'
+  pod 'Kingfisher'
 
 end
