@@ -6,12 +6,6 @@
 
 CoinTracker is a simple and intuitive iOS app designed to track cryptocurrency prices in real-time. Stay up-to-date with your favorite cryptocurrencies, view detailed charts, and get the latest market data at your fingertips.
 
-## Video Preview
-
-![Main Screen](https://via.placeholder.com/300x600.png?text=Main+Screen)
-![Detail View](https://via.placeholder.com/300x600.png?text=Detail+View)
-![Settings](https://via.placeholder.com/300x600.png?text=Settings)
-
 ## Features
 
 - **Real-time Price Tracking**: Get live updates for various cryptocurrencies.
