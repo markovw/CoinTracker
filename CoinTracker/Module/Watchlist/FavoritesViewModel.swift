@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-class Favorites: ObservableObject {
+class FavoritesViewModel: ObservableObject {
     @AppStorage("Favorites") private var storedTickers: String = ""
     @Published private var favoriteTickers: Set<String> = []
     

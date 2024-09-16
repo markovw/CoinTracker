@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		860847632C6534C20087B5BD /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860847622C6534C20087B5BD /* InfoCard.swift */; };
 		860C2FBC2C205C80004799C9 /* TickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C2FBB2C205C80004799C9 /* TickerRow.swift */; };
-		860C2FBE2C207F8F004799C9 /* MarketRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */; };
+		860C2FBE2C207F8F004799C9 /* MarketRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C2FBD2C207F8F004799C9 /* MarketRowViewModel.swift */; };
 		8614D1DA2C552872006FF8B8 /* TickerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614D1D92C552872006FF8B8 /* TickerList.swift */; };
 		8614D1DC2C553A73006FF8B8 /* PriceChangeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */; };
 		8614D1DE2C553BA2006FF8B8 /* TickerGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614D1DD2C553BA2006FF8B8 /* TickerGrid.swift */; };
@@ -26,14 +26,14 @@
 		869CCE0C2C1E3492004D8A2E /* MarketWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */; };
 		869D382A2C6ABA2000CFC8C3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D38292C6ABA2000CFC8C3 /* SearchBar.swift */; };
 		86AA223B2C5863CA008C7B78 /* CatAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 86AA223A2C5863CA008C7B78 /* CatAnimation.json */; };
-		86B34E192C401CC100F2F57D /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B34E182C401CC100F2F57D /* Favorites.swift */; };
+		86B34E192C401CC100F2F57D /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B34E182C401CC100F2F57D /* FavoritesViewModel.swift */; };
 		86B5950E2C46DEF400DCFAD6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */; };
 		86DB30A22C395663008B3731 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB30A12C395663008B3731 /* Keys.swift */; };
 		86E4180B2C0F6F9B008F1B01 /* CoinTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4180A2C0F6F9B008F1B01 /* CoinTrackerApp.swift */; };
 		86E4180D2C0F6F9B008F1B01 /* MarketTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4180C2C0F6F9B008F1B01 /* MarketTab.swift */; };
 		86E4180F2C0F6F9C008F1B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E4180E2C0F6F9C008F1B01 /* Assets.xcassets */; };
 		86E418122C0F6F9C008F1B01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E418112C0F6F9C008F1B01 /* Preview Assets.xcassets */; };
-		86EB51992C354AAA00230CFD /* MarketChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB51982C354AAA00230CFD /* MarketChartModel.swift */; };
+		86EB51992C354AAA00230CFD /* MarketChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB51982C354AAA00230CFD /* MarketChartViewModel.swift */; };
 		9FA552989B0013EFF760B690 /* Pods_CoinTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97A25BE926F722DDD275296 /* Pods_CoinTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		6C0467FD2FC3A119A00A621B /* Pods-CoinTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTracker.release.xcconfig"; path = "Target Support Files/Pods-CoinTracker/Pods-CoinTracker.release.xcconfig"; sourceTree = "<group>"; };
 		860847622C6534C20087B5BD /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 		860C2FBB2C205C80004799C9 /* TickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRow.swift; sourceTree = "<group>"; };
-		860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowModel.swift; sourceTree = "<group>"; };
+		860C2FBD2C207F8F004799C9 /* MarketRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowViewModel.swift; sourceTree = "<group>"; };
 		8614D1D92C552872006FF8B8 /* TickerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerList.swift; sourceTree = "<group>"; };
 		8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChangeTriangle.swift; sourceTree = "<group>"; };
 		8614D1DD2C553BA2006FF8B8 /* TickerGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerGrid.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketWatchlist.swift; sourceTree = "<group>"; };
 		869D38292C6ABA2000CFC8C3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		86AA223A2C5863CA008C7B78 /* CatAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CatAnimation.json; sourceTree = "<group>"; };
-		86B34E182C401CC100F2F57D /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		86B34E182C401CC100F2F57D /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		86DB30A12C395663008B3731 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		86E418072C0F6F9B008F1B01 /* CoinTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +66,7 @@
 		86E4180C2C0F6F9B008F1B01 /* MarketTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTab.swift; sourceTree = "<group>"; };
 		86E4180E2C0F6F9C008F1B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86E418112C0F6F9C008F1B01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		86EB51982C354AAA00230CFD /* MarketChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketChartModel.swift; sourceTree = "<group>"; };
+		86EB51982C354AAA00230CFD /* MarketChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketChartViewModel.swift; sourceTree = "<group>"; };
 		F97A25BE926F722DDD275296 /* Pods_CoinTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC59D23442959ED1EA02D3CD /* Pods-CoinTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTracker.debug.xcconfig"; path = "Target Support Files/Pods-CoinTracker/Pods-CoinTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,30 +86,23 @@
 		860C2FBF2C209248004799C9 /* Ext */ = {
 			isa = PBXGroup;
 			children = (
+				8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */,
 				868996C72C202F1000BA8581 /* Double.swift */,
 				86DB30A12C395663008B3731 /* Keys.swift */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
 		};
-		869CCE0D2C1E3507004D8A2E /* View */ = {
+		869CCE0D2C1E3507004D8A2E /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				86E4180C2C0F6F9B008F1B01 /* MarketTab.swift */,
-				869263BD2C1CCC7D00A280EA /* MarketRow.swift */,
-				860C2FBB2C205C80004799C9 /* TickerRow.swift */,
-				8614D1DD2C553BA2006FF8B8 /* TickerGrid.swift */,
-				8614D1D92C552872006FF8B8 /* TickerList.swift */,
-				863C38FA2C559B9B0062634C /* LoginScreen.swift */,
-				864286D82C10FF070093A8FC /* MarketDetail.swift */,
-				868996C52C1F2A9500BA8581 /* MarketChart.swift */,
-				869CCE092C1E33EC004D8A2E /* MarketSearch.swift */,
-				869D38292C6ABA2000CFC8C3 /* SearchBar.swift */,
-				869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */,
-				860847622C6534C20087B5BD /* InfoCard.swift */,
-				8614D1DB2C553A73006FF8B8 /* PriceChangeTriangle.swift */,
+				86FD67D22C9858A1000E8194 /* Launch */,
+				86FD67D12C985861000E8194 /* Markets */,
+				86FD67D02C98568C000E8194 /* Detail */,
+				86FD67CE2C9854FC000E8194 /* Watchlist */,
+				86FD67CF2C985648000E8194 /* Search */,
 			);
-			path = View;
+			path = Module;
 			sourceTree = "<group>";
 		};
 		869CCE0E2C1E35E4004D8A2E /* Model */ = {
@@ -117,9 +110,6 @@
 			children = (
 				8628BF642C1635F8006CF6B3 /* NetworkManager.swift */,
 				86B5950D2C46DEF400DCFAD6 /* AlertManager.swift */,
-				86EB51982C354AAA00230CFD /* MarketChartModel.swift */,
-				860C2FBD2C207F8F004799C9 /* MarketRowModel.swift */,
-				86B34E182C401CC100F2F57D /* Favorites.swift */,
 				864286D42C10FB3E0093A8FC /* Ticker.swift */,
 				8628BF662C163698006CF6B3 /* CRError.swift */,
 			);
@@ -148,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				86E4180A2C0F6F9B008F1B01 /* CoinTrackerApp.swift */,
-				869CCE0D2C1E3507004D8A2E /* View */,
+				869CCE0D2C1E3507004D8A2E /* Module */,
 				869CCE0E2C1E35E4004D8A2E /* Model */,
 				860C2FBF2C209248004799C9 /* Ext */,
 				86E4180E2C0F6F9C008F1B01 /* Assets.xcassets */,
@@ -165,6 +155,56 @@
 				86E418112C0F6F9C008F1B01 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86FD67CE2C9854FC000E8194 /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				8614D1DD2C553BA2006FF8B8 /* TickerGrid.swift */,
+				86B34E182C401CC100F2F57D /* FavoritesViewModel.swift */,
+				869CCE0B2C1E3492004D8A2E /* MarketWatchlist.swift */,
+			);
+			path = Watchlist;
+			sourceTree = "<group>";
+		};
+		86FD67CF2C985648000E8194 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				869CCE092C1E33EC004D8A2E /* MarketSearch.swift */,
+				8614D1D92C552872006FF8B8 /* TickerList.swift */,
+				869D38292C6ABA2000CFC8C3 /* SearchBar.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		86FD67D02C98568C000E8194 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				868996C52C1F2A9500BA8581 /* MarketChart.swift */,
+				86EB51982C354AAA00230CFD /* MarketChartViewModel.swift */,
+				864286D82C10FF070093A8FC /* MarketDetail.swift */,
+				860847622C6534C20087B5BD /* InfoCard.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		86FD67D12C985861000E8194 /* Markets */ = {
+			isa = PBXGroup;
+			children = (
+				860C2FBB2C205C80004799C9 /* TickerRow.swift */,
+				869263BD2C1CCC7D00A280EA /* MarketRow.swift */,
+				860C2FBD2C207F8F004799C9 /* MarketRowViewModel.swift */,
+			);
+			path = Markets;
+			sourceTree = "<group>";
+		};
+		86FD67D22C9858A1000E8194 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				86E4180C2C0F6F9B008F1B01 /* MarketTab.swift */,
+				863C38FA2C559B9B0062634C /* LoginScreen.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		DA48F208C46122EA3F96D90E /* Pods */ = {
@@ -318,9 +358,9 @@
 				869263BE2C1CCC7D00A280EA /* MarketRow.swift in Sources */,
 				869D382A2C6ABA2000CFC8C3 /* SearchBar.swift in Sources */,
 				868996C82C202F1000BA8581 /* Double.swift in Sources */,
-				86EB51992C354AAA00230CFD /* MarketChartModel.swift in Sources */,
-				86B34E192C401CC100F2F57D /* Favorites.swift in Sources */,
-				860C2FBE2C207F8F004799C9 /* MarketRowModel.swift in Sources */,
+				86EB51992C354AAA00230CFD /* MarketChartViewModel.swift in Sources */,
+				86B34E192C401CC100F2F57D /* FavoritesViewModel.swift in Sources */,
+				860C2FBE2C207F8F004799C9 /* MarketRowViewModel.swift in Sources */,
 				86E4180B2C0F6F9B008F1B01 /* CoinTrackerApp.swift in Sources */,
 				8614D1DE2C553BA2006FF8B8 /* TickerGrid.swift in Sources */,
 			);

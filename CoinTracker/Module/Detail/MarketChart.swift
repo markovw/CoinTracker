@@ -3,18 +3,18 @@ import Combine
 import Charts
 
 struct MarketChart: View {
-    @StateObject private var viewModel: MarketChartModel
+    @StateObject private var viewModel: MarketChartViewModel
     let ticker: Ticker
 
     init(ticker: Ticker) {
         self.ticker = ticker
-        _viewModel = StateObject(wrappedValue: MarketChartModel(ticker: ticker))
+        _viewModel = StateObject(wrappedValue: MarketChartViewModel(ticker: ticker))
     }
 
     var body: some View {
         VStack {
             Picker("Select Period", selection: $viewModel.selectedPeriod) {
-                ForEach(MarketChartModel.Period.allCases, id: \.self) { period in
+                ForEach(MarketChartViewModel.Period.allCases, id: \.self) { period in
                     Text(period.title).tag(period)
                 }
             }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MarketRow: View {
-    @EnvironmentObject var viewModel: MarketRowModel
+    @EnvironmentObject var viewModel: MarketRowViewModel
     
     var body: some View {
         NavigationStack {

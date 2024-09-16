@@ -20,7 +20,6 @@ struct LoginScreen: View {
                 })
                 .playbackMode(.playing(.toProgress(1, loopMode: .loop)))
                 .animationDidFinish { completed in
-                    
                 }
             
             VStack {

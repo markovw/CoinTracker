@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct CoinTrackerApp: App {
-    @StateObject private var favorites = Favorites()
-    @StateObject private var viewModel = MarketRowModel()
+    @StateObject private var favorites = FavoritesViewModel()
+    @StateObject private var viewModel = MarketRowViewModel()
         
     var body: some Scene {
         WindowGroup {

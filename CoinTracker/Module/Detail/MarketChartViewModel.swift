@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-class MarketChartModel: ObservableObject {
+class MarketChartViewModel: ObservableObject {
     @Published var prices: [(timestamp: TimeInterval, price: Double)] = []
     @Published var selectedPeriod: Period = .day
     

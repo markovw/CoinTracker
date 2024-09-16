@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MarketWatchlist: View {
-    @EnvironmentObject var favorites: Favorites
-    @EnvironmentObject var viewModel: MarketRowModel
+    @EnvironmentObject var favorites: FavoritesViewModel
+    @EnvironmentObject var viewModel: MarketRowViewModel
     
     var body: some View {
         // list of favorites
@@ -38,5 +38,5 @@ struct MarketWatchlist: View {
 
 #Preview {
     MarketWatchlist()
-        .environmentObject(MarketRowModel())
+        .environmentObject(MarketRowViewModel())
 }

@@ -27,7 +27,7 @@ struct TickerList: View {
                                 .font(.headline)
                         }
                     }
-                    .padding(.vertical, 10)
+                    .padding(.vertical)
                     
                     Spacer()
                     

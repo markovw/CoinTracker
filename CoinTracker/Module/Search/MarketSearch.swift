@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MarketSearch: View {
     @State private var searchTerm = ""
-    @EnvironmentObject var viewModel: MarketRowModel
+    @EnvironmentObject var viewModel: MarketRowViewModel
     @FocusState private var isSearchFocused: Bool
     
     var filteredTickers: [Ticker] {

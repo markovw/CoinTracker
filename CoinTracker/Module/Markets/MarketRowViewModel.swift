@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@MainActor class MarketRowModel: ObservableObject {
+@MainActor class MarketRowViewModel: ObservableObject {
     @Published var tickers: [Ticker] = []
     @Published var isLoading = true
     @Published var isMarketCapSorted: Bool = false
@@ -46,7 +46,7 @@ import SwiftUI
         }
     }
     
-    func filteredTickers(favorites: Favorites) -> [Ticker] {
+    func filteredTickers(favorites: FavoritesViewModel) -> [Ticker] {
         return tickers.filter { favorites.contains($0) }
     }
 }

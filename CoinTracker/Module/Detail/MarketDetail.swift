@@ -10,7 +10,7 @@ import Kingfisher
 
 struct MarketDetail: View {
     @StateObject private var alertManager = AlertManager()
-    @EnvironmentObject private var favorites: Favorites
+    @EnvironmentObject private var favorites: FavoritesViewModel
     let ticker: Ticker
     
     var body: some View {
@@ -88,5 +88,5 @@ struct MarketDetail: View {
 
 #Preview {
     MarketDetail(ticker: Ticker(id: "ethereum", symbol: "BTC", name: "Bitcoin", image: "https://coin-images.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1696501442", currentPrice: 10000, marketCap: 1000000000000, marketCapRank: 1, marketCapChangePercentage24H: 0.5, priceChangePercentage24H: 7.2, atl: 1.0, atlChangePercentage: 2.0, ath: 2.0, athChangePercentage: 2.1))
-        .environmentObject(Favorites())
+        .environmentObject(FavoritesViewModel())
 }

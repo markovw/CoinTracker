@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GridView<Content: View>: View { // generic
-    @EnvironmentObject var viewModel: MarketRowModel
+    @EnvironmentObject var viewModel: MarketRowViewModel
     
     let content: () -> Content
     
